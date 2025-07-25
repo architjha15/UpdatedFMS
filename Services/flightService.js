@@ -16,7 +16,6 @@ const fetchFlight = async () => {
 const flightToFilter = async (stringDate) => {
   const filterDate = new Date(stringDate);
   const firstDate = filterDate;
-  console.log(firstDate);
   firstDate.setHours(0, 0, 0, 0);
   const startDate = new Date(
     firstDate.getTime() - firstDate.getTimezoneOffset() * 60000
@@ -27,7 +26,6 @@ const flightToFilter = async (stringDate) => {
   const endDate = new Date(
     lastDate.getTime() - lastDate.getTimezoneOffset() * 60000
   );
-  console.log(endDate);
   return await flightDetails.find({
     flightDate: {
       $gte: startDate,
