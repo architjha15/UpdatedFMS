@@ -5,7 +5,6 @@ const flight = require("./Routes/flightRoutes");
 const layover = require("./Routes/layoverRoutes");
 const price = require("./Routes/priceRoutes");
 const seat = require("./Routes/seatRoutes");
-console.log("hello");
 const app = express();
 app.use(express.json());
 app.use(cors());
